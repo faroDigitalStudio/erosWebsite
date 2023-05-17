@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<!--
+index.html
+Created 09.12.21
+Updated 05.17.23
+The Lighthouse Collective
+-->
+
+<html lang="en">
+<head>
+    <!-- Meta -->
+    <meta charset="UTF-8">
+    <meta name="description" content="With Eros, love's most radiant moments are immortalized. Our lens, steeped in the edgy spirit of Metalumina, crafts nuanced shades of emotion from every frame. From Harlingen, TX, we journey across the nation, our camera a trusted companion, bearing witness to vows whispered, laughter shared, and dances remembered.">
+    <meta name="keywords" content="Eros, Wedding Photography, Photos, Portfolio, Harlingen, TX, Nationwide, Traveling Photographer, Monochrome, Metallic, Contemporary, Metalumina, Unique, Classy, Love, Moments, Storytelling">
+    <meta name="author" content="The Lighthouse Collective">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ 
+    <!-- GOOGLE ANALYTICS -->
+    
+    <title>Eros Photography</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="magnify">
+        <h1 onclick="closemagnify()"><i class="fas fa-times"></i></h1>
+        <div id="img_here"></div>
+    </div>
+    <header id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+        <table>
+            <tr>
+                <td id="logo">
+                    <a href="#">
+                        <img src="images/logoFull.png" alt="Eros Wedding Photography Logo">
+                    </a>
+                </td>                
+                <td id="navigation">
+                    <a href="#bio">The Experience</a>
+                    <a href="#work">Portfolio</a>
+                    <!--<a href="#pricing">Pricing</a>-->
+                    <a href="#contact">Connect</a>
+                </td>
+            </tr>
+        </table>
+    </header>
+    <table id="top_part">
+        <tr>
+            <td id="about" class="animated slideInLeft" style="animation-delay:2s;">
+                <h1>Unveiling Love,<br>Celebrating Connection</h1>
+                <button class="btn_one">Secure Your Date</button>
+                <table>
+                    <tr>
+                        <td class="animated zoomIn" style="animation-delay:2.8s;"><a class="social" href="https://www.instagram.com/eros.photos"><i class="fab fa-instagram"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.6s;"><a class="social" href="https://twitter.com/ErosPhotographs"><i class="fab fa-twitter"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.4s;"><a class="social" href="https://www.flickr.com/photos/erospics/"><i class="fab fa-flickr"></i></a></td>
+                        <td class="animated zoomIn" style="animation-delay:2.2s;"><a class="social" href="https://www.behance.net/erosphotography"><i class="fab fa-behance"></i></a></td>
+                    </tr>
+                </table>
+            </td>
+            <td id="rightImage" class="animated jackInTheBox" style="animation-delay:2.2s;"></td>
+        </tr>
+    </table>
+   
+    <div id="bio">
+        <h1>The Experience</h1>
+        <p>
+            Eros Wedding Photography captures love in its purest form, crystallizing moments that will last a lifetime. Our approach is modern, edgy, and always chic, designed to reflect the unique beauty of every couple we photograph.
+            <br> <br>
+            Your wedding day is a celebration of your love story, and we're here to tell it in a way that is as unique and special as you are. We bring a fresh perspective to wedding photography, infusing every shot with creativity, joy, and a sense of wonder. Our promise is to create images that will bring you back to the moment, to the emotion, and to the love that was shared. With Eros, your memories are not just preserved – they are immortalized.
+        </p>
+    </div>
+
+    <div id="work">
+        <h1>Our Work</h1>
+        <p>Explore the enchanting world of Eros Wedding Photography through our monochromatic portfolio. Each image encapsulates an eternal moment of love.</p>
+        <div id="photos">
+            <img onclick="magnify($(this).attr('src'))" src="/images/wedding1.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="/images/wedding2.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="/images/wedding3.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="/images/wedding4.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="/images/wedding5.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="/images/wedding6.jpg">
+            <img onclick="magnify($(this).attr('src'))" src="/images/wedding7.jpg">
+        </div>
+    </div>
+    
+    <!--
+    <section id="pricing">
+        Pricing content goes here
+    </section>
+    -->    
+
+    <div id="contact">
+        <h1>Get in Touch</h1>
+        <p>We'd love to hear from you. Whether you have a question or just want to say hello, don't hesitate to reach out. We're here to make your experience unforgettable. Please note that this form is for general inquiries only. To book a session, please use the "Book Your Session" button, above.</p>
+        <br>
+        <table>
+            <tr>
+                <td>
+                    <div id="inner_div">
+                        <table id="inner_table">
+                            <tr>
+                                <td><i class="fas fa-phone"></i> &nbsp; 307.213.9222</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-at"></i> &nbsp; book@erosphotos.com</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fas fa-map-marker-alt"></i>
+                                <div id="address">
+                                    On the road, North America <br>
+                                    & beyond
+                                </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!-- <a class="social"><i class="fab fa-facebook"></i></a> -->
+                                    <a class="social" href="https://www.instagram.com/eros.weddingphotos"><i class="fab fa-instagram"></i></a>
+                                    <a class="social" href="https://www.twitter.com/ErosWeddingPhotography/"><i class="fab fa-twitter"></i></a>
+                                    <a class="social" href="https://www.flickr.com/photos/erosweddingphotos/"><i class="fab fa-flickr"></i></a>
+                                    <a class="social" href="https://www.behance.net/erosweddingphotography"><i class="fab fa-behance"></i></a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+                <td>
+                    <form action="/submit_form" method="post">
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+                        <input type="email" id="email" name="email" placeholder="Email" required><br>
+                        <input type="text" id="subject" name="subject" placeholder="Subject" required><br>
+                        <textarea id="message" name="message" placeholder="Note" required rows="3"></textarea><br>
+                        <div class="captcha-send">
+                            <div class="g-recaptcha" data-sitekey="your-recaptcha-site-key"></div><br>
+                            <button class="btn_one" type="submit">SEND</button>
+                        </div>
+                    </form> 
+                </td>
+            </tr>
+        </table>
+    </div>    
+    
+    <div id="footer">
+        <div class="footer-item">
+            <p>Powered by<br><a href="https://www.lighthousecollective.net" target="_blank">The Lighthouse Collective</a></p>
+        </div>
+        <div class="footer-item">
+            <a href="#">
+                <img src="images/logo.png" alt="Eros Wedding Photography Logo" />
+            </a>
+            <p class="copyright">&copy; Eros Photography, 2023. All rights reserved.</p>
+        </div>
+        <div class="footer-item">
+            <p class="metalumina-text">A creative endeavor within<br><a href="https://www.metalumina.studio" target="_blank">the Metalumina spectrum</a></p>
+        </div>
+    </div>
+
+    <script src="index.js" type="text/javascript"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
+
+</body>
+</html>
