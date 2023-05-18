@@ -68,7 +68,7 @@ $(document).ready(function(){
   });
 
   $(document).ready(function(){
-    $("#logo a, .footer-item a").click(function(event){
+    $("#logo a, .logo-link").click(function(event){
         event.preventDefault();
         $('html, body').animate({scrollTop: 0}, 'slow');
     });
