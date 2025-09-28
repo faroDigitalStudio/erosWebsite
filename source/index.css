@@ -662,3 +662,20 @@ img { max-width: 100%; height: auto; }
   }
   #footer { padding: 10px 8px; }
 }
+
+/* Desktop/Mobile visibility helpers */
+.desktop-only { display: block; }
+.mobile-only  { display: none; }
+
+@media (max-width: 1000px) {
+  /* Use the compact block on phones */
+  .desktop-only { display: none !important; }
+  .mobile-only  { display: block !important; text-align: center; }
+
+  /* Make footer a normal block on mobile so text wraps neatly */
+  #footer { display: block; padding: 12px 10px; }
+
+  .footer-mobile { font-size: 0.85rem; line-height: 1.25; }
+  .footer-mobile a { color: #2A2A2A; text-decoration: none; }
+  .footer-mobile a:hover { color: var(--accent-gold); text-decoration: underline; }
+}
