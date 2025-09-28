@@ -618,3 +618,47 @@ img { max-width: 100%; height: auto; }
   background: var(--accent-gold) !important;
   box-shadow: 0 10px 30px rgba(166,124,0,0.8);
 }
+
+/* === Footer mobile compression (place at end) === */
+@media (max-width: 1000px) {
+  #footer {
+    padding: 12px 10px;              /* less vertical padding */
+    gap: 8px;                        /* if browser supports gap on flex */
+    row-gap: 8px;
+    flex-wrap: wrap;                 /* allow items to wrap neatly */
+  }
+
+  #footer .footer-item {
+    flex: 1 1 100%;                  /* stack items cleanly */
+    text-align: center;              /* unify alignment */
+    margin: 0;
+  }
+
+  /* Shrink type + tighten line height */
+  #footer .footer-item p,
+  #footer .footer-item a,
+  .metalumina-text,
+  .copyright {
+    font-size: 0.85rem;
+    line-height: 1.25;
+  }
+
+  /* Trim extra spacing */
+  #footer .footer-item p { margin: 4px 0; }
+  .copyright { margin-top: 6px; }
+
+  /* Keep the Metalumina line centered on mobile */
+  .metalumina-text { text-align: center; }
+
+  /* Reduce logo height a touch so the middle column feels lighter */
+  #footer .logo-link img { max-height: 64px; }
+}
+
+/* Extra small screens: nudge a bit more */
+@media (max-width: 420px) {
+  #footer .footer-item p,
+  #footer .footer-item a {
+    font-size: 0.8rem;
+  }
+  #footer { padding: 10px 8px; }
+}
