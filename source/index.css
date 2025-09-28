@@ -549,3 +549,72 @@ button:focus {
   background: var(--accent-gold) !important; /* gold circle */
   box-shadow: 0 10px 30px rgba(166,124,0,0.8);
 }
+
+/* === Mobile/responsive fixes (append at end of index.css) ================== */
+
+/* 0) Global guards */
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; height: auto; }
+
+/* 1) Keep the header sticky on mobile and prevent content from sliding under it */
+@media (max-width:1000px){
+  header {
+    position: fixed !important;
+    top: 0; left: 0; right: 0;
+    z-index: 9999;
+    background: #fff;
+    padding: 3vh 2vw;
+  }
+  /* stack logo/nav cleanly */
+  #header table tr td { width:100%; display:block; text-align:center; padding:10px 0; }
+  /* add space below sticky header so hero isn't hidden */
+  #top_part { margin-top: 14vh; } /* tweak to 12–16vh if needed */
+}
+
+/* 2) Hero sizing & wrapping (prevent horizontal spill) */
+@media (max-width:1000px){
+  /* allow headings to wrap on small screens */
+  h1 { white-space: normal; }
+  #about {
+    width: 92% !important;
+    height: auto !important;
+    padding: 6vh 4% 8vh !important;  /* top | sides | bottom */
+    text-align: center;
+  }
+  /* feature chips: center and keep tidy */
+  .feature-pills { justify-content: center; }
+  .feature-pills li { white-space: nowrap; font-size: 0.95rem; }
+}
+
+/* 3) Buttons: allow wrapping to avoid overflow, keep desktop styling on mobile */
+@media (max-width:1000px){
+  .btn_one {
+    white-space: normal;               /* was nowrap → caused spill */
+    max-width: 90%;
+    width: auto;
+    line-height: 1.2;
+    padding: 10px 22px;
+    background: #fff;                  /* ensure white base on mobile */
+    color: var(--accent-gold);
+    border-color: var(--accent-gold);
+  }
+  .btn_one:hover {
+    background: var(--accent-gold);
+    color: #fff;
+  }
+}
+
+/* 4) Table hero guard: never exceed viewport width */
+#top_part, #top_part table { table-layout: fixed; width: 100%; }
+
+/* 5) Chips color: gold border + black text/icons (hero & about) */
+.feature-pills li { border-color: var(--accent-gold) !important; color: #2A2A2A !important; }
+.feature-pills li i { color: inherit !important; }
+
+/* 6) Social hover: white icon on gold circle (override earlier rule) */
+.social { color: var(--accent-gold); }
+.social:hover {
+  color: #fff !important;
+  background: var(--accent-gold) !important;
+  box-shadow: 0 10px 30px rgba(166,124,0,0.8);
+}
